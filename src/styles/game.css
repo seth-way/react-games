@@ -1,0 +1,7 @@
+.player-X {
+    color: var(--primary_C);
+}
+
+.player-O {
+    color: var(--secondary_C);
+}

@@ -1,0 +1,66 @@
+.board {
+    --sqr-size: 2rem;
+    --font-size: 1.5rem;
+    --gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.board-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.square {
+    border: 1px solid var(--text-2_C);
+    font-size: var(--font-size);
+    font-weight: bold;
+    text-align: center;
+    width: var(--sqr-size);
+    height: var(--sqr-size);
+    background: var(--bg_C);
+    transition: all 0.45s ease-in;
+    color: transparent;
+
+    &.winner {
+        transform: scale(1.05);
+        border-radius: 5px;
+        &.player-X {
+            background-color: rgb(from var(--primary_C) r g b / 15%);
+        }
+        &.player-O {
+            background-color: rgb(from var(--secondary_C) r g b / 15%);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-radius: 5px;
+        transform: scale(1.2);
+    }
+
+    &.hover-X:hover {
+        color: rgb(from var(--primary_C) r g b / 30%);
+    }
+
+    &.hover-O:hover {
+        color: rgb(from var(--secondary_C) r g b / 30%);
+    }
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.complete {
+    cursor: auto;
+    pointer-events: none;
+}
