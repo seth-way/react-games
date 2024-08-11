@@ -21,8 +21,7 @@ export default function TicTacToe() {
     if (isDraw) return "It's a Draw!";
     return (
       <>
-        {" "}
-        Player · <span>{playersTurn}</span>
+        Player · <span className={`player-${playersTurn}`}>{playersTurn}</span>
       </>
     );
   }
@@ -41,8 +40,8 @@ export default function TicTacToe() {
   }
 
   return (
-    <>
-      <h1>{createStatusMessage()}</h1>
+    <div id="tic-tac-toe-game">
+      <h2>{createStatusMessage()}</h2>
       <Board
         squares={currentSquares}
         onPlay={handlePlay}
@@ -50,6 +49,6 @@ export default function TicTacToe() {
         isComplete={winner || isDraw}
         playersTurn={playersTurn}
       />
-    </>
+    </div>
   );
 }

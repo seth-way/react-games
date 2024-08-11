@@ -1,3 +1,13 @@
+#tic-tac-toe-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 1em;
+    }
+}
+
 .player-X {
     color: var(--primary_C);
 }
