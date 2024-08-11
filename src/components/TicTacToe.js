@@ -72,8 +72,8 @@ export default function TicTacToe() {
         <ScoreBoard player="O" wins={playerYWins} />
       </div>
       <div className="buttons">
-        <button>clear board</button>
-        <button>new game</button>
+        <button onClick={clearBoard}>clear board</button>
+        <button onClick={newGame}>new game</button>
       </div>
     </div>
   );

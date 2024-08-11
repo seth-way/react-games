@@ -25,9 +25,7 @@
     width: 31%;
     height: 100%;
     background: var(--bg_C);
-    transition:
-        all 0.45s ease-in,
-        font-size 0s;
+    transition: transform 0.45s ease-in;
     color: transparent;
 
     &.winner {

@@ -6,8 +6,8 @@ export default function ScoreBoard({ player, wins }) {
         <ol className="wins">
           {Array(wins)
             .fill(0)
-            .map(() => (
-              <li></li>
+            .map((_, i) => (
+              <li key={i}></li>
             ))}
         </ol>
       ) : (

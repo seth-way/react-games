@@ -1,5 +1,7 @@
 @import "board";
 @import "game";
+@import "nav";
+@import "ui";
 
 :root {
     /* background */
@@ -12,7 +14,7 @@
     );
 
     --bg-light1: #fff;
-    --bg-light2: #fff;
+    --bg-light2: #d3d3d3;
     --bg-light-gradient: linear-gradient(
         45deg,
         var(--bg-dark1),
@@ -23,16 +25,24 @@
     --text-dark-alt: #b3b3b3;
 
     --text-light: #000;
+    --text-light-alt: #36454f;
     /* colors */
     --primary-dark: #fbe932;
     --secondary-dark: #f137a6;
+    --accent-dark: #32cd32;
+
+    --primary-light: #ff5c5c;
+    --secondary-light: #5c9eff;
+    --accent-light: #ffd700;
 
     /* app colors */
     --bg_C: var(--bg-dark1);
+    --bg-2_C: var(--bg-dark2);
     --text_C: var(--text-dark);
     --text-2_C: var(--text-dark-alt);
     --primary_C: var(--primary-dark);
     --secondary_C: var(--secondary-dark);
+    --accent_C: var(--accent-dark);
 }
 
 *,
@@ -44,20 +54,13 @@
 body {
     background: var(--bg_C);
     color: var(--text_C);
+}
+
+#root {
+    position: relative;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-button {
-    color: var(--text_C);
-    text-transform: uppercase;
-    border: thin solid var(--text-2_C);
-    background: transparent;
-    padding: 0.25rem 0.5rem;
-    &:hover {
-        cursor: pointer;
-    }
 }

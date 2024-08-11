@@ -25,6 +25,9 @@ export default function Square({ value, idx, winning3, onPlay, playersTurn }) {
     : ` hover-${playersTurn}`;
 
   if (winnerCSS) translateWinningSquare(ref);
+  else {
+    if (ref.current) ref.current.removeAttribute("style");
+  }
 
   return (
     <button
