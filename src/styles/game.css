@@ -2,17 +2,52 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 
     h2 {
         font-size: 2rem;
         font-weight: 200;
-        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+        text-wrap: nowrap;
     }
 
-    & > div {
+    .game-info {
+        width: clamp(7rem, 90vw, 15rem);
         display: flex;
-        align-items: flex-start;
-        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5vw;
+        position: relative;
+
+        @media (min-width: 500px) {
+            .scoreboard {
+                position: absolute;
+                top: clamp(-15rem, -90vw, -7rem);
+                right: 105%;
+
+                &:nth-child(2n) {
+                    left: 105%;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: clamp(7rem, 90vw, 15rem);
+
+        & > :first-child:hover {
+            background-color: rgb(from orange r g b / 15%);
+        }
+
+        & > :last-child:hover {
+            background-color: rgb(from blue r g b / 15%);
+        }
     }
 }
 
@@ -20,8 +55,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
-    width: 8rem;
+    width: 40%;
 
     h3 {
         width: 100%;

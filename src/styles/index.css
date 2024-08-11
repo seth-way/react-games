@@ -50,3 +50,14 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+button {
+    color: var(--text_C);
+    text-transform: uppercase;
+    border: thin solid var(--text-2_C);
+    background: transparent;
+    padding: 0.25rem 0.5rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
