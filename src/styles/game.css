@@ -4,7 +4,61 @@
     align-items: center;
 
     h2 {
+        font-size: 2rem;
+        font-weight: 200;
         margin-bottom: 1em;
+    }
+
+    & > div {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 8rem;
+
+    h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid var(--text-2_C);
+        padding-bottom: 0.5rem;
+    }
+
+    ol {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        height: 20px;
+        border: 1px solid var(--text_C);
+        margin-right: 4px;
+
+        &:nth-child(5n) {
+            transform: rotate(300deg);
+            -webkit-transform: rotate(300deg);
+            -moz-transform: rotate(300deg);
+            -o-transform: rotate(300deg);
+            height: 30px;
+            position: relative;
+            left: -15px;
+            top: 5px;
+            margin-right: 1em;
+            margin-top: -10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 

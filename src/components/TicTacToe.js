@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Board from "./ticTacToe/Board";
+import ScoreBoard from "./ticTacToe/ScoreBoard";
 import checkBoard from "../lib/ticTacToe";
 
 export default function TicTacToe() {
@@ -42,13 +43,17 @@ export default function TicTacToe() {
   return (
     <div id="tic-tac-toe-game">
       <h2>{createStatusMessage()}</h2>
-      <Board
-        squares={currentSquares}
-        onPlay={handlePlay}
-        winning3={winning3}
-        isComplete={winner || isDraw}
-        playersTurn={playersTurn}
-      />
+      <div>
+        <ScoreBoard player={"X"} wins={15} />
+        <Board
+          squares={currentSquares}
+          onPlay={handlePlay}
+          winning3={winning3}
+          isComplete={winner || isDraw}
+          playersTurn={playersTurn}
+        />
+        <ScoreBoard player={"O"} wins={3} />
+      </div>
     </div>
   );
 }
