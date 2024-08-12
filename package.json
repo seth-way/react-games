@@ -1,7 +1,6 @@
 {
   "name": "react.dev",
   "version": "0.0.0",
-  "main": "/src/index.js",
   "description": "Sleek UI with mini-games used as a React sandboxing tool.",
   "author": "Seth Way",
   "license": "MIT",
@@ -9,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/seth-way/react-games.git"
   },
-  "homepage": "<http://seth-way.github.io/react-games>",
+  "homepage": "http://seth-way.github.io/react-games",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
