@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Board from "./ticTacToe/Board";
 import ScoreBoard from "./ticTacToe/ScoreBoard";
 import checkBoard from "../lib/ticTacToe";
@@ -9,6 +9,13 @@ export default function TicTacToe() {
   const [winner, declareWinner] = useState(null);
   const [playerXWins, setXWins] = useState(0);
   const [playerYWins, setYWins] = useState(0);
+  const newGameRef = useRef(null);
+
+  useEffect(() => {
+    console.log("using effect....");
+    if (newGameRef && newGameRef.current) console.log(newGameRef.current);
+    if (winner) newGameRef.current.focus();
+  }, [winner]);
 
   const currentSquares = history[history.length - 1];
   const playersTurn = history.length % 2 ? "X" : "O";
@@ -54,6 +61,7 @@ export default function TicTacToe() {
     clearBoard();
     setWinners([]);
     declareWinner(null);
+    newGameRef.current.blur();
   }
 
   return (
@@ -73,7 +81,9 @@ export default function TicTacToe() {
       </div>
       <div className="buttons">
         <button onClick={clearBoard}>clear board</button>
-        <button onClick={newGame}>new game</button>
+        <button onClick={newGame} ref={newGameRef}>
+          new game
+        </button>
       </div>
     </div>
   );
