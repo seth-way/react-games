@@ -1,4 +1,4 @@
-# ![spinning react logo](./src/assets/images/react-logo.gif) React Games ![spinning react logo](./src/assets/images/react-logo.gif)
+# <img src="./src/assets/images/react-logo.png" alt="react logo" width="50"/> [React Games](https://seth-way.github.io/react-games/) <img src="./src/assets/images/react-logo.png" alt="react logo" width="50"/>
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
