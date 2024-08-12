@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "test": "mochapack 'test/**/*.js'",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d public"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
