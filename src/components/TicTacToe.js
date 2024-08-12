@@ -12,8 +12,6 @@ export default function TicTacToe() {
   const newGameRef = useRef(null);
 
   useEffect(() => {
-    console.log("using effect....");
-    if (newGameRef && newGameRef.current) console.log(newGameRef.current);
     if (winner) newGameRef.current.focus();
   }, [winner]);
 
